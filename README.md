@@ -1,74 +1,97 @@
-# re-awaken
+# Vite simple starter markup template
 
-A guide to the world of Illustris.
+![screenshot](/demo/main-page.png)
 
-## Getting Started with Create React App
+On the Internet, it was difficult for me to find a simple template assembly to replace Gulp, and I decided to implement my “Simple markup template for beginners VITE” so that you can start comfortably developing simple landing pages or simple multi-pages sites. The build leverages Vite's capabilities for a modern and reliable build process.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Key features of this template:
 
-## Available Scripts
+Build Tools: Vite.js
+Plugins: Autoprefixer, Imagemin, Imagemin-Webp, PostCSS Sort Media Queries, Vite plugin Image Optimizer
+Styles: SCSS
+Reset: Reset.css
 
-In the project directory, you can run:
+Get your project up and running quickly with this template and start creating amazing web applications!
 
-### `npm start`
+## Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This template uses the following dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **[Vite](https://vitejs.dev/):** A next-generation frontend build tool that offers a fast dev server and optimized builds.
+- **[autoprefixer](https://www.npmjs.com/package/autoprefixer):** Autoprefixer automatically adds vendor prefixes to CSS.
+- **[vite-plugin-image-optimizer](https://github.com/FatehAK/vite-plugin-image-optimizer):** Image optimization (png, jpeg, gif, tiff, webp, avif). 
+- **[imagemin-webp](https://www.npmjs.com/package/imagemin-webp):** Converts formats such as .png/.jpg etc to .webp format
+- **[postcss-sort-media-queries](https://www.npmjs.com/package/postcss-sort-media-queries):** Plugin for sorting and combining CSS media queries with mobile first / desktop first methodologies.
 
-### `npm test`
+## Starting
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. To start using this template, clone the repository with this command:
 
-### `npm run build`
+```bash
+git clone https://github.com/Grinch3214/vite-builder.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Then rename the folder "vite-builder" and install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+cd your-project-name
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Further steps
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+After cloning the template, make sure to clean up and update the following:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Remove the .git directory and run `git init` to clean the commit history.
+2. Clean up the README.md file.
+3. Adapt the LICENSE file to your project.
+4. Delete `public/vite.svg`, folder `demo/`, `src/img/**/*`, `src/fonts/**/*` and also `src/scss/**.*` except `style.scss` and `_reset.scss`.
+5. Remove unnecessary `.html` files in the `pages` folder.
+6. Delete the content from `src/scss/style.scss` except `@import "reset.scss";`.
+7. In the `src/js/main.js` file, leave only these import statements: `import '../scss/style.scss';`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Scripts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Use the following scripts for your development workflow:
 
-## Learn More
+```bash
+# Start the development server
+npm run dev
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Build for production
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Preview the build
+npm run preview
+```
 
-### Code Splitting
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This is the structure of the project:
 
-### Analyzing the Bundle Size
+```plaintext
+/
+├── node_modules            # Node.js dependencies for the project.
+├── pages                   # Folder for additional .html pages
+├── public                  # Public assets and resources
+├── src                     # Source code
+│   ├── fonts	            # Folder for your fonts
+│   ├── img                 # Folder for your images
+│   ├── js                  # Javascript files of your project
+│   ├── scss                # SCSS styles for your project
+├── .gitignore              # Files and folders to be ignored by Git
+├── index.html              # The HTML file for your project
+├── LICENSE                 # The license for your project
+├── package-lock.json       # Lockfile for your project's dependencies
+├── package.json            # Defines your project and its dependencies
+├── postcss.config.cjs      # Configuration for PostCSS
+├── README.md               # This file
+├── vite.config.js          # Configuration for Vite
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+This template was created under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Thank you and happy coding!** 💻
