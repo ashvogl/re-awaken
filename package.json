@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"scripts": {
+  "scripts": {
     "dev:vault-login": "ob login --email %OBSIDIAN_EMAIL% --password %OBSIDIAN_PASSWORD% --mfa %npm_config_obsidianmfa%",
     "dev:vault-setup": "ob sync-setup --vault Illustris --path illustris --password %VAULT_PASSWORD% && ob sync-config --path illustris --mode mirror-remote --device-name site-auto",
     "prod:vault-login": "ob login --email $OBSIDIAN_EMAIL --password $OBSIDIAN_PASSWORD --mfa $npm_config_obsidianmfa",
@@ -17,7 +17,6 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "compiiile": "^2.18.12",
     "fast-glob": "^3.3.3",
     "imagemin": "^9.0.1",
     "imagemin-webp": "^8.0.0",
@@ -29,6 +28,7 @@
     "vite-plugin-image-optimizer": "^1.1.8"
   },
   "dependencies": {
+    "@compiiile/compiiile-pro": "^1.3.2",
     "dotenv": "^17.3.1"
   }
 }
