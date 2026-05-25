@@ -10,7 +10,7 @@
     "prod:vault-setup": "ob sync-setup --vault Illustris --path illustris --password $VAULT_PASSWORD && ob sync-config --path illustris --mode mirror-remote --device-name site-auto",
     "vault-sync": "ob sync --path illustris",
     "dev": "compiiile-pro dev",
-    "prod": "compiiile-pro build"
+    "prod": "compiiile-pro build --dest=dist"
   },
   "browserslist": [
     "cover 99.5%"
