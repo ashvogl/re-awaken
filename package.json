@@ -1,12 +1,16 @@
 {
-  "name": "started-vite-template",
+  "name": "re-awaken",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+"scripts": {
+    "dev:vault-login": "ob login --email %OBSIDIAN_EMAIL% --password %OBSIDIAN_PASSWORD% --mfa %npm_config_obsidianmfa%",
+    "dev:vault-setup": "ob sync-setup --vault Illustris --path illustris --password %VAULT_PASSWORD% && ob sync-config --path illustris --mode mirror-remote --device-name site-auto",
+    "prod:vault-login": "ob login --email $OBSIDIAN_EMAIL --password $OBSIDIAN_PASSWORD --mfa $npm_config_obsidianmfa",
+    "prod:vault-setup": "ob sync-setup --vault Illustris --path illustris --password $VAULT_PASSWORD && ob sync-config --path illustris --mode mirror-remote --device-name site-auto",
+    "vault-sync": "ob sync --path illustris",
+    "dev": "compiiile-pro dev",
+    "prod": "compiiile-pro build"
   },
   "browserslist": [
     "cover 99.5%"
@@ -22,5 +26,8 @@
     "svgo": "^3.3.2",
     "vite": "^6.2.1",
     "vite-plugin-image-optimizer": "^1.1.8"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
   }
 }
