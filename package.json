@@ -17,6 +17,7 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "compiiile": "^2.18.12",
     "fast-glob": "^3.3.3",
     "imagemin": "^9.0.1",
     "imagemin-webp": "^8.0.0",
