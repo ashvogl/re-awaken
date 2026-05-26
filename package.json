@@ -7,7 +7,8 @@
     "dev:vault-login": "ob login --email %npm_config_obsidianemail% --password %npm_config_obsidianpassword%",
     "dev:vault-setup": "ob sync-setup --vault Illustris --path illustris --password %VAULT_PASSWORD% && ob sync-config --path illustris --mode mirror-remote --device-name site-auto",
     "prod:vault-login": "ob login --email $OBSIDIAN_EMAIL --password $OBSIDIAN_PASSWORD",
-    "prod:vault-setup": "ob sync-setup --vault Illustris --path illustris --password $VAULT_PASSWORD && ob sync-config --path illustris --mode mirror-remote --device-name site-auto",
+    "prod:vault-setup": "ob sync-setup --vault Illustris --path illustris --password $VAULT_PASSWORD",
+    "prod:vault-config": "ob sync-config --path illustris --mode mirror-remote --device-name site-auto",
     "vault-sync": "ob sync --path illustris",
     "dev": "compiiile-pro dev",
     "prod": "compiiile-pro build --dest=dist"
